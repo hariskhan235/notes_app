@@ -12,6 +12,7 @@ class AddEditNotePage extends StatefulWidget {
     this.note,
   }) : super(key: key);
   @override
+  // ignore: library_private_types_in_public_api
   _AddEditNotePageState createState() => _AddEditNotePageState();
 }
 
@@ -37,7 +38,7 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
       Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.green.shade100,
-          title: Text('Edit Notes'),
+          title: const Text('Edit Notes'),
           centerTitle: true,
         actions: [buildButton()],
     ),
@@ -62,14 +63,14 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
     final isFormValid = title.isNotEmpty && description.isNotEmpty;
 
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           onPrimary: Colors.white,
           primary: isFormValid ? null : Colors.grey.shade700,
         ),
         onPressed: addOrUpdateNote,
-        child: Text('Save'),
+        child: const Text('Save'),
       ),
     );
   }
@@ -86,6 +87,7 @@ class _AddEditNotePageState extends State<AddEditNotePage> {
         await addNote();
       }
 
+      // ignore: use_build_context_synchronously
       Navigator.of(context).pop();
     }
   }

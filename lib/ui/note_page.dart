@@ -75,6 +75,7 @@ class _NotesPageState extends State<NotesPage> {
       );
 
   Widget buildNotes() => GridView.builder(
+    padding: const EdgeInsets.all(8),
         itemCount: notes.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, mainAxisSpacing: 4, crossAxisSpacing: 4),

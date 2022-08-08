@@ -82,7 +82,7 @@ packages:
     source: sdk
     version: "0.0.0"
   intl:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: intl
       url: "https://pub.dartlang.org"
@@ -136,7 +136,7 @@ packages:
     source: hosted
     version: "1.8.2"
   sqflite:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: sqflite
       url: "https://pub.dartlang.org"
